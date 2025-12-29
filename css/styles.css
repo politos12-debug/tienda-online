@@ -1402,16 +1402,10 @@ body {
 
     .cart-icon {
         font-size: 1rem;
-        order: 2;
-    }
-
-    #auth-button {
-        order: 1;
     }
 
     .btn-login {
-        padding: 6px 12px;
-        font-size: 0.8rem;
+        display: none;
     }
 
     .nav {
@@ -1583,14 +1577,8 @@ body {
         flex-shrink: 0;
     }
 
-    #auth-button {
-        display: flex;
-    }
-
     .btn-login {
-        padding: 5px 8px;
-        font-size: 0.7rem;
-        white-space: nowrap;
+        display: none;
     }
 
     .cart-icon {
