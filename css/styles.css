@@ -1364,12 +1364,47 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        order: 1;
     }
 
     .header .container {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
+        padding: 0.8rem 10px;
+    }
+
+    .logo {
+        flex: 1;
+        justify-content: center;
+        order: 2;
+        gap: 8px;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    .header-right {
+        order: 3;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .cart-icon {
+        font-size: 1rem;
+        order: 1;
+    }
+
+    .btn-login {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        order: 2;
     }
 
     .nav {
@@ -1405,27 +1440,7 @@ body {
         padding: 15px 20px;
         font-size: 1rem;
     }
-
-    .header-right {
-        gap: 1rem;
-    }
-
-    .btn-login {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-
-    .cart-icon {
-        font-size: 1.2rem;
-    }
-
-    .logo h1 {
-        font-size: 1.2rem;
-    }
-
-    .logo-img {
-        height: 50px;
-    }
+}
 
     /* Hero Section */
     .hero {
@@ -1526,25 +1541,46 @@ body {
 
 @media (max-width: 480px) {
     .header .container {
-        padding: 0 10px;
+        padding: 0.6rem 8px;
+        gap: 8px;
+    }
+
+    .hamburger {
+        padding: 6px;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+    }
+
+    .logo {
+        flex: 1;
+        gap: 5px;
     }
 
     .logo h1 {
-        font-size: 1rem;
-        letter-spacing: 1px;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+        display: none;
     }
 
     .logo-img {
-        height: 40px;
+        height: 35px;
+    }
+
+    .header-right {
+        gap: 6px;
     }
 
     .btn-login {
-        padding: 6px 12px;
-        font-size: 0.85rem;
+        padding: 5px 10px;
+        font-size: 0.75rem;
+        white-space: nowrap;
     }
 
     .cart-icon {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     /* Hero Section */

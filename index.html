@@ -14,8 +14,14 @@
     <!-- Header y Navegación -->
     <header class="header">
         <div class="container">
+            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="logo">
                 <a href="/"><img src="images/logo.png" alt="Joyería Galiana" class="logo-img"></a>
+                <h1>Galiana</h1>
             </div>
             <nav class="nav" id="nav-menu">
                 <ul>
@@ -34,11 +40,6 @@
                 <div class="cart-icon" onclick="window.location.href='/carrito.html'" style="cursor: pointer;">🛒 <span
                         id="cart-count">0</span></div>
             </div>
-            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </header>
 
