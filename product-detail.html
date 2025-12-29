@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle del Producto - Joyería Galiana</title>
-    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/styles.css?v=3">
     <link rel="stylesheet" href="css/product-detail.css?v=1">
 </head>
 
@@ -13,13 +13,19 @@
     <!-- Header y Navegación -->
     <header class="header">
         <div class="container">
+            <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="logo">
                 <a href="/"><img src="images/logo.png" alt="Joyería Galiana" class="logo-img"></a>
             </div>
-            <nav class="nav">
+            <nav class="nav" id="nav-menu">
                 <ul>
                     <li><a href="/">Volver a Inicio</a></li>
                     <li><a href="/productos.html">Productos</a></li>
+                    <li><a href="#" onclick="window.openLoginModal(); return false;">Iniciar Sesión</a></li>
                 </ul>
             </nav>
             <div class="header-right">
