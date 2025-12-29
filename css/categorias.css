@@ -257,12 +257,13 @@
 
     .productos-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px;
-        padding: 0 5px;
+        gap: 8px;
+        padding: 0 8px;
+        max-width: 100%;
     }
 
     .producto-imagen {
-        height: 140px;
+        height: 120px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -279,21 +280,22 @@
     }
 
     .producto-card {
-        padding: 8px;
+        padding: 6px;
+        box-sizing: border-box;
     }
 
     .producto-nombre {
-        font-size: 0.85rem;
-        line-height: 1.2;
+        font-size: 0.8rem;
+        line-height: 1.1;
     }
 
     .producto-precio {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .btn-ver-detalle,
     .btn-carrito {
-        padding: 8px;
-        font-size: 0.75rem;
+        padding: 6px;
+        font-size: 0.7rem;
     }
 }
