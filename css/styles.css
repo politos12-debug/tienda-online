@@ -377,41 +377,41 @@ body {
     }
 
     .categorias .container {
-        padding: 0;
+        padding: 0 15px;
         max-width: 100%;
     }
 
     .categorias-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 8px;
-        padding: 0 8px;
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+        padding: 0;
         max-width: 100%;
     }
 
     .categoria-card {
-        padding: 8px;
+        padding: 20px;
         box-sizing: border-box;
     }
 
     .categoria-icon {
-        width: 70px;
-        height: 70px;
-        margin: 0 auto 6px;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 12px;
     }
 
     .categoria-card h3 {
-        font-size: 0.85rem;
-        margin-bottom: 4px;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
     }
 
     .categoria-card p {
-        font-size: 0.7rem;
-        margin-bottom: 6px;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
     }
 
     .btn-secundario {
-        padding: 6px 10px;
-        font-size: 0.7rem;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
