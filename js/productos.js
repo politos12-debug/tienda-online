@@ -1,3 +1,29 @@
+// ========== MOBILE MENU TOGGLE ==========
+function toggleMobileMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    const hamburger = document.getElementById('hamburger');
+    
+    if (navMenu) {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+}
+
+// Cerrar menú móvil cuando se hace clic en un enlace
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const navMenu = document.getElementById('nav-menu');
+            const hamburger = document.getElementById('hamburger');
+            if (navMenu) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    });
+});
+
 // Variables globales
 let supabaseClient = null;
 let allProductosPage = [];
