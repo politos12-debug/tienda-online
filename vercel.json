@@ -1,0 +1,8 @@
+{
+  "buildCommand": "echo 'Static site, no build needed'",
+  "outputDirectory": ".",
+  "env": {
+    "VITE_SUPABASE_URL": "@supabase_url",
+    "VITE_SUPABASE_ANON_KEY": "@supabase_key"
+  }
+}

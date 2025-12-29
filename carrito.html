@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito - Joyería Galiana</title>
+    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/carrito.css?v=1">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="Joyería Galiana" class="logo-img"></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Volver a Inicio</a></li>
+                    <li><a href="/productos.html">Productos</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="cart-icon" onclick="window.location.href='/carrito.html'" style="cursor: pointer;">🛒 <span
+                        id="cart-count">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrito -->
+    <main class="carrito-container">
+        <div class="container">
+            <h1>Mi Carrito de Compras</h1>
+
+            <div class="carrito-content">
+                <!-- Tabla de productos -->
+                <div class="carrito-items">
+                    <table id="carrito-table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carrito-tbody">
+                            <!-- Se cargará dinámicamente -->
+                        </tbody>
+                    </table>
+
+                    <!-- Carrito vacío -->
+                    <div id="carrito-vacio" class="carrito-vacio" style="display: none;">
+                        <div class="empty-state">
+                            <div class="empty-icon">🛒</div>
+                            <h2>Tu carrito está vacío</h2>
+                            <p>¿Qué esperas? ¡Ve a comprar algunas joyas hermosas!</p>
+                            <a href="/" class="btn-principal">Continuar Comprando</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumen de compra -->
+                <aside class="carrito-summary">
+                    <h2>Resumen de Compra</h2>
+
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">€0.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Envío:</span>
+                        <span id="envio">€0.00</span>
+                    </div>
+
+                    <div class="summary-row discount" id="descuento-row" style="display: none;">
+                        <span>Descuento:</span>
+                        <span id="descuento-amount">-€0.00</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">€0.00</span>
+                    </div>
+
+                    <!-- Código de descuento -->
+                    <div class="descuento-input">
+                        <input type="text" id="codigo-descuento" placeholder="Código de descuento">
+                        <button onclick="aplicarDescuento()" class="btn-secundario">Aplicar</button>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="carrito-actions">
+                        <button class="btn-principal btn-block" onclick="irACheckout()">Proceder al Pago</button>
+                        <button class="btn-secundario btn-block" onclick="window.location.href='/'">Continuar
+                            Comprando</button>
+                    </div>
+
+                    <!-- Info de envío -->
+                    <div class="shipping-info">
+                        <p>✓ Envío gratis en compras mayores a €100</p>
+                        <p>✓ Entrega en 2-3 días laborales</p>
+                        <p>✓ Garantía de 2 años en todas las joyas</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Joyería Galiana. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos de Servicio</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/carrito.js?v=2"></script>
+</body>
+
+</html>

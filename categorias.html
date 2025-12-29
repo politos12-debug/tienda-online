@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - Joyería Galiana</title>
+    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/categorias.css?v=1">
+</head>
+
+<body>
+    <!-- Header y Navegación -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="Joyería Galiana" class="logo-img"></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/productos.html">Productos</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="/#ofertas">Ofertas</a></li>
+                    <li><a href="/#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="/#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <div class="cart-icon" onclick="window.location.href='/carrito.html'" style="cursor: pointer;">🛒 <span
+                        id="cart-count">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="categorias-container">
+        <div class="container">
+            <div class="categoria-header">
+                <h1 id="categoria-titulo">Categoría</h1>
+                <p id="categoria-desc">Explora nuestra colección de joyas</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="filtros-container">
+                <div class="filtro-grupo">
+                    <label for="filtro-precio">Ordenar por:</label>
+                    <select id="filtro-precio" onchange="aplicarFiltros()">
+                        <option value="nuevo">Más Nuevo</option>
+                        <option value="precio-asc">Precio: Menor a Mayor</option>
+                        <option value="precio-desc">Precio: Mayor a Menor</option>
+                        <option value="nombre">Nombre (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div class="productos-grid" id="productos-grid">
+                <!-- Se cargará dinámicamente -->
+            </div>
+
+            <!-- Sin productos -->
+            <div id="sin-productos" class="sin-productos" style="display: none;">
+                <h2>No hay productos en esta categoría</h2>
+                <p><a href="/">Volver al inicio</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Joyería Galiana. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos de Servicio</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/categorias.js?v=2"></script>
+</body>
+
+</html>

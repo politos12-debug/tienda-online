@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Joyería Galiana</title>
+    <link rel="stylesheet" href="css/styles.css?v=2">
+    <link rel="stylesheet" href="css/checkout.css?v=1">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt="Joyería Galiana" class="logo-img"></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/">Volver a Inicio</a></li>
+                    <li><a href="/productos.html">Productos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkout -->
+    <main class="checkout-container">
+        <div class="container">
+            <h1>Completar Compra</h1>
+
+            <div class="checkout-content">
+                <!-- Formulario de datos -->
+                <div class="checkout-form">
+                    <form id="checkout-form" onsubmit="procesarPago(event)">
+                        <!-- Información de Cliente -->
+                        <fieldset>
+                            <legend>Información de Contacto</legend>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre Completo:</label>
+                                    <input type="text" id="nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefono" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- Dirección de Envío -->
+                        <fieldset>
+                            <legend>Dirección de Envío</legend>
+
+                            <div class="form-group">
+                                <label for="direccion">Calle y Número:</label>
+                                <input type="text" id="direccion" required>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ciudad">Ciudad:</label>
+                                    <input type="text" id="ciudad" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="codigo-postal">Código Postal:</label>
+                                    <input type="text" id="codigo-postal" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pais">País:</label>
+                                <input type="text" id="pais" value="España" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- Método de Pago -->
+                        <fieldset>
+                            <legend>Método de Pago</legend>
+
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="metodo-pago" value="tarjeta" checked>
+                                    <span class="payment-label">💳 Tarjeta de Crédito/Débito</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="metodo-pago" value="transferencia">
+                                    <span class="payment-label">🏦 Transferencia Bancaria</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="metodo-pago" value="paypal">
+                                    <span class="payment-label">💰 PayPal</span>
+                                </label>
+                            </div>
+
+                            <!-- Datos de Tarjeta -->
+                            <div id="tarjeta-datos" class="payment-details">
+                                <div class="form-group">
+                                    <label for="titular">Titular de la Tarjeta:</label>
+                                    <input type="text" id="titular">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="numero-tarjeta">Número de Tarjeta:</label>
+                                    <input type="text" id="numero-tarjeta" placeholder="1234 5678 9012 3456"
+                                        maxlength="19">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiracion">Vencimiento:</label>
+                                        <input type="text" id="expiracion" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV:</label>
+                                        <input type="text" id="cvv" placeholder="123" maxlength="3">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Términos y Condiciones -->
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input type="checkbox" id="terminos" required>
+                                <span>Acepto los <a href="#">términos y condiciones</a></span>
+                            </label>
+                        </div>
+
+                        <!-- Botón Enviar -->
+                        <button type="submit" class="btn-principal btn-block">Completar Compra</button>
+                    </form>
+                </div>
+
+                <!-- Resumen de Pedido -->
+                <aside class="checkout-summary">
+                    <h2>Resumen del Pedido</h2>
+
+                    <div class="order-items" id="order-items">
+                        <!-- Se cargará aquí -->
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="checkout-subtotal">€0.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Envío:</span>
+                        <span id="checkout-envio">€0.00</span>
+                    </div>
+
+                    <div class="summary-row" id="checkout-descuento-row" style="display: none;">
+                        <span>Descuento:</span>
+                        <span id="checkout-descuento">-€0.00</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="checkout-total">€0.00</span>
+                    </div>
+
+                    <!-- Información de seguridad -->
+                    <div class="security-info">
+                        <p>🔒 Tus datos están protegidos con encriptación SSL</p>
+                        <p>✓ Compra segura y garantizada</p>
+                        <p>✓ Devolución dentro de 30 días</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Joyería Galiana. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/checkout.js?v=1"></script>
+</body>
+
+</html>
