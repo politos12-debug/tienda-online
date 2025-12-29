@@ -256,12 +256,12 @@
     }
 
     .productos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
     }
 
     .producto-imagen {
-        height: 180px;
+        height: 160px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -278,10 +278,14 @@
     }
 
     .producto-card {
-        padding: 12px;
+        padding: 10px;
     }
 
     .producto-nombre {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .producto-precio {
+        font-size: 18px;
     }
 }
