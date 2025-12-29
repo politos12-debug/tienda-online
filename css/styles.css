@@ -1371,7 +1371,9 @@ body {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
+        align-items: center;
         padding: 0.8rem 10px;
+        gap: 5px;
     }
 
     .logo {
@@ -1392,19 +1394,24 @@ body {
 
     .header-right {
         order: 3;
+        display: flex;
         gap: 8px;
-        flex-wrap: wrap;
+        align-items: center;
+        margin-left: auto;
     }
 
     .cart-icon {
         font-size: 1rem;
+        order: 2;
+    }
+
+    #auth-button {
         order: 1;
     }
 
     .btn-login {
         padding: 6px 12px;
         font-size: 0.8rem;
-        order: 2;
     }
 
     .nav {
@@ -1542,11 +1549,12 @@ body {
 @media (max-width: 480px) {
     .header .container {
         padding: 0.6rem 8px;
-        gap: 8px;
+        gap: 6px;
     }
 
     .hamburger {
         padding: 6px;
+        flex-shrink: 0;
     }
 
     .hamburger span {
@@ -1557,6 +1565,7 @@ body {
     .logo {
         flex: 1;
         gap: 5px;
+        min-width: 0;
     }
 
     .logo h1 {
@@ -1570,17 +1579,22 @@ body {
     }
 
     .header-right {
-        gap: 6px;
+        gap: 5px;
+        flex-shrink: 0;
+    }
+
+    #auth-button {
+        display: flex;
     }
 
     .btn-login {
-        padding: 5px 10px;
-        font-size: 0.75rem;
+        padding: 5px 8px;
+        font-size: 0.7rem;
         white-space: nowrap;
     }
 
     .cart-icon {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     /* Hero Section */
