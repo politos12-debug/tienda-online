@@ -374,25 +374,33 @@ body {
 @media (max-width: 768px) {
     .categorias-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px;
+        gap: 10px;
+        padding: 0 5px;
     }
 
     .categoria-card {
-        padding: 15px;
+        padding: 10px;
     }
 
     .categoria-icon {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto 10px;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 8px;
     }
 
     .categoria-card h3 {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
     }
 
     .categoria-card p {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
+        margin-bottom: 8px;
+    }
+
+    .btn-secundario {
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
 }
 
@@ -609,33 +617,40 @@ body {
 @media (max-width: 768px) {
     .productos-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px;
+        gap: 10px;
         width: 100%;
         max-width: 100%;
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .producto-card {
         height: auto;
-        min-height: 320px;
-        padding: 12px;
+        min-height: 280px;
+        padding: 8px;
     }
 
     .producto-imagen {
-        height: 130px;
+        height: 110px;
     }
 
     .producto-imagen img {
-        height: 130px !important;
+        height: 110px !important;
     }
 
     .producto-card h3 {
-        font-size: 0.95rem;
-        min-height: 38px;
+        font-size: 0.85rem;
+        min-height: 34px;
+        line-height: 1.2;
     }
 
     .precio {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        min-height: 28px;
+    }
+
+    .btn-agregar {
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
 }
 
@@ -821,13 +836,17 @@ body {
 @media (max-width: 768px) {
     .ofertas-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 15px;
+        gap: 10px;
         width: 100%;
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .oferta-card {
-        padding: 20px;
+        padding: 15px;
+    }
+
+    .oferta-card h3 {
+        font-size: 1.1rem;
     }
 }
 
