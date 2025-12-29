@@ -371,6 +371,23 @@ body {
     margin-top: 60px;
 }
 
+@media (max-width: 768px) {
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .categoria-card {
+        padding: 20px;
+    }
+
+    .categoria-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 15px;
+    }
+}
+
 .categoria-card {
     background-color: var(--color-luz);
     padding: 40px;
@@ -581,6 +598,29 @@ body {
     width: fit-content;
 }
 
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .producto-card {
+        height: auto;
+        min-height: 350px;
+    }
+
+    .producto-imagen {
+        height: 150px;
+    }
+
+    .producto-imagen img {
+        height: 150px !important;
+    }
+}
+
 .producto-card {
     background-color: var(--color-luz);
     padding: 20px;
@@ -758,6 +798,15 @@ body {
     margin-right: auto;
     width: fit-content;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .ofertas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        padding: 0 10px;
+    }
 }
 
 .oferta-card {
@@ -1443,101 +1492,95 @@ body {
     }
 }
 
-    /* Hero Section */
-    .hero {
-        padding: 40px 20px;
-        text-align: center;
-    }
+/* Hero Section */
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-    .hero h2 {
-        font-size: 2rem;
-    }
+.hero h2 {
+    font-size: 2rem;
+}
 
-    .hero p {
-        font-size: 1rem;
-        margin: 15px 0;
-    }
+.hero p {
+    font-size: 1rem;
+    margin: 15px 0;
+}
 
-    .btn-primary {
-        padding: 12px 25px;
-        font-size: 1rem;
-    }
+.btn-primary {
+    padding: 12px 25px;
+    font-size: 1rem;
+}
 
-    /* Secciones */
-    .section {
-        padding: 30px 20px;
-    }
+/* Secciones */
+.section {
+    padding: 30px 20px;
+}
 
-    .section h2 {
-        font-size: 1.8rem;
-    }
+.section h2 {
+    font-size: 1.8rem;
+}
 
-    /* Grid de productos */
-    .products-grid,
-    .categories-grid,
-    .offers-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
+/* Grid de productos - Already handled by specific media queries above */
 
-    .product-card,
-    .category-card,
-    .offer-card {
-        padding: 15px;
-    }
+.product-card,
+.category-card,
+.offer-card {
+    padding: 15px;
+}
 
-    .product-card h3,
-    .category-card h3 {
-        font-size: 1rem;
-    }
+.product-card h3,
+.category-card h3 {
+    font-size: 1rem;
+}
 
-    .product-card p,
-    .category-card p {
-        font-size: 0.9rem;
-    }
+.product-card p,
+.category-card p {
+    font-size: 0.9rem;
+}
 
-    .product-price {
-        font-size: 1.2rem;
-    }
+.product-price {
+    font-size: 1.2rem;
+}
 
-    /* Modal */
-    .modal-content {
-        width: 90%;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
+/* Modal */
+.modal-content {
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
 
-    .form-group {
-        margin-bottom: 12px;
-    }
+.form-group {
+    margin-bottom: 12px;
+}
 
-    .form-group label {
-        font-size: 0.9rem;
-    }
+.form-group label {
+    font-size: 0.9rem;
+}
 
-    .form-group input,
-    .form-group select {
-        font-size: 1rem;
-    }
+.form-group input,
+.form-group select {
+    font-size: 1rem;
+}
 
-    /* Footer */
-    .footer {
-        padding: 20px;
-    }
+/* Footer */
+.footer {
+    padding: 20px;
+}
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+.footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
 
-    .footer h4 {
-        font-size: 1.1rem;
-    }
+.footer h4 {
+    font-size: 1.1rem;
+}
 
-    .footer p,
-    .footer a {
-        font-size: 0.9rem;
-    }
+.footer p,
+.footer a {
+    font-size: 0.9rem;
+}
 }
 
 @media (max-width: 480px) {
@@ -1616,13 +1659,7 @@ body {
         font-size: 0.9rem;
     }
 
-    /* Grid de productos */
-    .products-grid,
-    .categories-grid,
-    .offers-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
+    /* Grid de productos - Already handled by specific media queries above */
 
     .product-card,
     .category-card,
